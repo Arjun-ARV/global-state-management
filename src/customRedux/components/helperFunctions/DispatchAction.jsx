@@ -1,7 +1,11 @@
-import * as actions from '../mainFunctions/Actions';
+// import * as actions from '../mainFunctions/Actions';
 
-function DispatchAction({ actionName, value, type,store }) {
-    store.updateState(prevState =>({...prevState,[type]:actions[actionName](value)}))
+function DispatchAction({type,payload}) {
+
+    console.log('payload : ',payload);
+    console.log('type : ', type);
+    // state.updateState(prevState =>({...prevState,[type]:'hello'}))
+    
 }
 
 export default DispatchAction

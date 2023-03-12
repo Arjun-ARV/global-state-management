@@ -1,14 +1,8 @@
-const incrementCount =(value)=>{
-    console.log('incrementCount')
-    return value.sum+value.count;
+const incrementCount =({count,sum})=>{
+    return {
+        type: 'INCERMENT',
+        payload: count+sum
+    };
 }
 
-const decrementCount=(value)=>{
-    return value?.sum-value?.count;
-}
-
-const resetCount=(value)=>{
-    return value;
-}
-
-export {incrementCount,decrementCount,resetCount}
+export {incrementCount}
