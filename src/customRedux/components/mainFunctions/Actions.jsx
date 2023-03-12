@@ -1,8 +1,25 @@
-const incrementCount =({count,sum})=>{
+const incrementCount = (sum, updateState) => {
     return {
         type: 'INCERMENT',
-        payload: count+sum
+        payload: sum + 10,
+        updateState: updateState
     };
 }
 
-export {incrementCount}
+const decrementCount = (sum, updateState) => {
+    return {
+        type: 'DECREMENT',
+        payload: sum - 10,
+        updateState: updateState
+    };
+}
+
+const currencyExchange = (data, updateState) => {
+    return {
+        type: 'CURRENCY',
+        payload: data,
+        updateState: updateState
+    };
+}
+
+export { incrementCount,decrementCount,currencyExchange }
