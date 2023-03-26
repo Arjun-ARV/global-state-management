@@ -3,6 +3,7 @@ import DispatchAction from './customRedux/components/helperFunctions/DispatchAct
 import { currencyExchange, decrementCount, incrementCount } from './customRedux/components/mainFunctions/Actions';
 import Selector from './customRedux/components/helperFunctions/Selector';
 import axios from 'axios';
+import HelloKitty from 'amith-hello-kitty';
 ;
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <div id="counter-app" style={{ alignItems: 'center' }}>
+        <HelloKitty/>
         <div style={{ display: 'flex' }}>
           <div id="display-container" className="container">
             <p id="display">{state.INCERMENT}</p>
